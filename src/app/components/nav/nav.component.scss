@@ -4,6 +4,14 @@
     padding: 0.5rem;
 }
 
+.nav-list {
+    gap: 1rem;
+
+    & a {
+        margin-bottom: 0.5rem;
+    }
+}
+
 .align-item {
     display: flex;
 

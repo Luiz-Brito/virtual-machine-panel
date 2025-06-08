@@ -1,0 +1,9 @@
+export interface VirtualMachine {
+  id: number;
+  name: string;
+  cpu: number;
+  memory: number;
+  disc: number;
+  status: string;
+  createdAt: string;
+}

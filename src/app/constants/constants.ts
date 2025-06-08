@@ -1,0 +1,1 @@
+export const TABLE_HEADER = ['id', 'name', 'cpu', 'memory', 'disc', 'createdAt', 'status', 'action'];

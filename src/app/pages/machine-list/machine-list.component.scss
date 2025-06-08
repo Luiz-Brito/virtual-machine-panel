@@ -1,0 +1,23 @@
+.btn-create {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+table {
+    width: 100%;
+}
+
+.edit, .delete {
+    cursor: pointer;
+}
+
+.edit {
+    color: #d9cd26;
+    margin-right: 10px;
+}
+
+.delete {
+    color: #e35e6b;
+}
