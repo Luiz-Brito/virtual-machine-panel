@@ -7,3 +7,10 @@ export interface VirtualMachine {
   status: string;
   createdAt: string;
 }
+
+export interface VirtualMachineParams {
+  name: string;
+  cpu: number;
+  memory: number;
+  disc: number;
+}

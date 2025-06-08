@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { VirtualMachine } from '../models/virtualMachine.model';
+import { VirtualMachine, VirtualMachineParams } from '../models/virtualMachine.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, map, Observable, catchError } from 'rxjs';
 
@@ -19,6 +19,13 @@ export class VirtualMachineService {
       catchError(e => this.errorHandler(e))
     );
   }
+
+    createVirtualMachine(data: VirtualMachineParams): Observable<VirtualMachineParams> {
+      return this.http.post<VirtualMachineParams>(this.BASE_URL, data).pipe(
+        map((obj) => obj),
+        catchError(e => this.errorHandler(e))
+      )
+  }
   
     showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {
@@ -31,7 +38,7 @@ export class VirtualMachineService {
 
     errorHandler(e: any): Observable<any> {
     console.log(e)
-    this.showMessage('Ocorreu um erro!', true)
+    this.showMessage(e.error.detail, true)
     return EMPTY
   }
 }

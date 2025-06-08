@@ -7,10 +7,11 @@ import { VirtualMachineService } from '../../services/virtual-machine-service.se
 import { Router } from '@angular/router';
 import { TABLE_HEADER } from '../../constants/constants';
 import { VirtualMachine } from '../../models/virtualMachine.model';
+import { CustomDateFormatPipe } from '../../pipes/custom-date-format.pipe';
 
 @Component({
   selector: 'app-machine-list',
-  imports: [MatCardModule, CommonModule, MatTableModule, MatButtonModule],
+  imports: [MatCardModule, CommonModule, MatTableModule, MatButtonModule, CustomDateFormatPipe],
   templateUrl: './machine-list.component.html',
   styleUrl: './machine-list.component.scss'
 })
