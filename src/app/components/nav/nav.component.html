@@ -1,0 +1,25 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <div class="align-item">
+                <i class="material-icons">
+                    home
+                </i>
+                <span>Home</span>
+                </div>
+            </a>
+            <a mat-list-item routerLink="/">
+                <div class="align-item">
+                <i class="material-icons">
+                    settings_system_daydream
+                </i>
+                <span>Virtual Machines</span>
+                </div>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>
