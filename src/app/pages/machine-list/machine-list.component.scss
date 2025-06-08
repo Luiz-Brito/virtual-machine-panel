@@ -1,8 +1,14 @@
-.btn-create {
+.actions {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 1rem 0;
+    gap: 1rem;
+
+    & i {
+        cursor: pointer;
+    }
 }
 
 table {

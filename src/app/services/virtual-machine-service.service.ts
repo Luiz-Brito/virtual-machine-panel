@@ -26,6 +26,13 @@ export class VirtualMachineService {
         catchError(e => this.errorHandler(e))
       )
   }
+
+    deleteVirtualMachine(id: number) {
+      return this.http.delete<number>(`${this.BASE_URL}/${id}`).pipe(
+        map((obj) => obj),
+        catchError(e => this.errorHandler(e))
+      )
+  }
   
     showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {

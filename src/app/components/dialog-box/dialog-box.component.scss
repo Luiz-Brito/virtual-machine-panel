@@ -1,0 +1,13 @@
+.container {
+    padding: 16px;
+}
+
+.title-dialog {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    & i {
+        color: #F1F11E;
+    }
+}
