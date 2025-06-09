@@ -1,59 +1,36 @@
-# VirtualMachinePanel
+# Virtual Machine Panel
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14.
+## About <a name = "about"
 
-## Development server
+This project is a web application developed in Angular 19, which implements a complete CRUD (Create, Read, Update, Delete) for managing virtual machines.
+The main objective is to allow users to view, register, edit and remove virtual machines in a simple and efficient way, through an intuitive interface.
 
-To start a local development server, run:
+The Virtual Machine frontend application is built using Angular with TypeScript. The application is styled using Angular Material and SCSS.
 
-```bash
-ng serve
+The API calls are made using RxJS and the services are organized in the services folder which each file is responsible for a specific resource.
+
+## 🏁 Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
+
+### Prerequisites
+
+You need to have Node.js at least version 20 installed on your machine.
+
+### Installing
+
+Once you have all the prerequisites and the repository cloned, you can install the dependencies by running:
+
+```
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Usage
 
-## Code scaffolding
+To run the application, run:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The application will be available at http://localhost:4200.
