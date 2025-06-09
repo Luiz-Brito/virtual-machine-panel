@@ -1,0 +1,55 @@
+.container {
+    padding: 16px;
+}
+
+.header {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+
+    .icon {
+        cursor: pointer;
+    }
+}
+
+
+.vm-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    .vm-header {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.vm-specs-list {
+    list-style: none;
+    margin-top: 2rem;
+
+    .vm-spec-item {
+        margin-bottom: 10px;
+    }
+}
+
+.status-start, .status-stop, .status-suspend {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.status-start {
+  background-color: #2e7d32;
+}
+
+.status-stop {
+  background-color: #c62828; 
+}
+
+.status-suspend {
+  background-color: #757575;
+}
+

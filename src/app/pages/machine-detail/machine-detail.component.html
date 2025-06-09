@@ -1,0 +1,32 @@
+<mat-card class="container">
+  <div class="header">
+    <i class="icon material-icons" (click)="goBack()">arrow_back</i>
+    <mat-card-title class="title">Virtual machine</mat-card-title>
+  </div>
+  <mat-card-content>
+  <div class="vm-details">
+    <div class="vm-header">
+      <span class="vm-id">Id: {{ virtualMachineData.id }}</span>
+      <span class="vm-name">Name: {{ virtualMachineData.name }}</span>
+      <span class="vm-date">Created At: {{ virtualMachineData?.createdAt | customDateFormat }}</span>
+    </div>
+
+    <div class="vm-name-container">
+      <span class="vm-status" [ngClass]="{
+    'status-start': virtualMachineData.status === 'START',
+    'status-stop': virtualMachineData.status === 'STOP',
+    'status-suspend': virtualMachineData.status === 'SUSPEND'
+  }">{{ virtualMachineData.status }}</span>
+    </div>
+  </div>
+
+  <div class="vm-specs">
+    <ul class="vm-specs-list">
+      <li class="vm-spec-item">CPU: {{ virtualMachineData.cpu }}</li>
+      <li class="vm-spec-item">Memory: {{ virtualMachineData.memory }} GB</li>
+      <li class="vm-spec-item">Disc: {{ virtualMachineData.disc }} GB</li>
+    </ul>
+  </div>
+  </mat-card-content>
+
+</mat-card>

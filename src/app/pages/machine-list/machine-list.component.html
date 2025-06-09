@@ -64,6 +64,9 @@
           <a class="delete">
             <i class="material-icons" (click)="openDialog(row.id)">delete</i>
           </a>
+          <a routerLink="detail/{{ row.id }}" class="info-icon">
+            <i class="material-icons">info</i>
+          </a>
         </td>
       </ng-container>
   
