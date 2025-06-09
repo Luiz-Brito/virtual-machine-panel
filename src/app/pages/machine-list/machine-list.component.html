@@ -32,14 +32,14 @@
 
        <!-- Memory Column -->
       <ng-container matColumnDef="memory">
-        <th mat-header-cell *matHeaderCellDef>Memory (GB)</th>
-        <td mat-cell *matCellDef="let row">{{row.memory}}</td>
+        <th mat-header-cell *matHeaderCellDef>Memory</th>
+        <td mat-cell *matCellDef="let row">{{row.memory}} GB</td>
       </ng-container>
 
        <!-- Disc Column -->
       <ng-container matColumnDef="disc">
-        <th mat-header-cell *matHeaderCellDef>Disc (GB)</th>
-        <td mat-cell *matCellDef="let row">{{row.disc}}</td>
+        <th mat-header-cell *matHeaderCellDef>Disc</th>
+        <td mat-cell *matCellDef="let row">{{row.disc}} GB</td>
       </ng-container>
 
        <!-- AcreatedAt Column -->
@@ -58,7 +58,7 @@
        <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let row">
-          <a class="edit">
+          <a routerLink="update/{{ row.id }}" class="edit">
             <i class="material-icons">edit</i>
           </a>
           <a class="delete">

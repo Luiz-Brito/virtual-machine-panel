@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { VirtualMachineService } from '../../services/virtual-machine-service.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TABLE_HEADER } from '../../constants/constants';
 import { VirtualMachine } from '../../models/virtualMachine.model';
 import { CustomDateFormatPipe } from '../../pipes/custom-date-format.pipe';
@@ -14,7 +14,7 @@ import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-machine-list',
-  imports: [MatCardModule, CommonModule, MatTableModule, MatButtonModule, CustomDateFormatPipe, MatTooltip],
+  imports: [MatCardModule, CommonModule, MatTableModule, MatButtonModule, CustomDateFormatPipe, MatTooltip, RouterLink],
   templateUrl: './machine-list.component.html',
   styleUrl: './machine-list.component.scss'
 })

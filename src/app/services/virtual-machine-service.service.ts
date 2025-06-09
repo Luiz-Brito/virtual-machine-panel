@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { VirtualMachine, VirtualMachineParams } from '../models/virtualMachine.model';
+import { VirtualMachine, VirtualMachineParams, VirtualMachineUpdateParams } from '../models/virtualMachine.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, map, Observable, catchError } from 'rxjs';
 
@@ -18,10 +18,24 @@ export class VirtualMachineService {
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
     );
-  }
+    }
 
-    createVirtualMachine(data: VirtualMachineParams): Observable<VirtualMachineParams> {
-      return this.http.post<VirtualMachineParams>(this.BASE_URL, data).pipe(
+    getVirtualMachineById(id: number) {
+      return this.http.get<VirtualMachine>(`${this.BASE_URL}/${id}`).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+    }
+
+    updateVirtualMachineById(id: number, data: VirtualMachineUpdateParams) {
+      return this.http.patch<VirtualMachine>(`${this.BASE_URL}/${id}`, data).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+    }
+
+    createVirtualMachine(data: VirtualMachineParams) {
+      return this.http.post<VirtualMachine>(this.BASE_URL, data).pipe(
         map((obj) => obj),
         catchError(e => this.errorHandler(e))
       )
