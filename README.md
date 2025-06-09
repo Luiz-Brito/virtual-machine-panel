@@ -1,6 +1,6 @@
 # Virtual Machine Panel
 
-## About <a name = "about"
+## About
 
 This project is a web application developed in Angular 19, which implements a complete CRUD (Create, Read, Update, Delete) for managing virtual machines.
 The main objective is to allow users to view, register, edit and remove virtual machines in a simple and efficient way, through an intuitive interface.
@@ -9,7 +9,7 @@ The Virtual Machine frontend application is built using Angular with TypeScript.
 
 The API calls are made using RxJS and the services are organized in the services folder which each file is responsible for a specific resource.
 
-## 🏁 Getting Started
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
